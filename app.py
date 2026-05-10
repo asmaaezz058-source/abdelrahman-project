@@ -11,6 +11,7 @@ products = [
 
 
 
+
 @app.route('/')
 def home():
      render_template("index."html, products=products)
