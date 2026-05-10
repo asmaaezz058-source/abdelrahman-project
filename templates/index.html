@@ -1,0 +1,38 @@
+
+html_code = '''
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <title>عبدالرحمن محمد للكماليات</title>
+    <style>
+        body { font-family: Tahoma; background: #f0f0f0; text-align: center; }
+        h1 { color: #1e3a8a; margin-top: 20px; } 
+        .product { 
+            background: white; 
+            border-radius: 15px; 
+            display: inline-block; 
+            margin: 15px; 
+            padding: 15px; 
+            width: 220px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .product img { width: 200px; height: 200px; border-radius: 10px; }
+        .name { font-size: 18px; font-weight: bold; margin: 10px 0; }
+        .price { font-size: 20px; color: #27ae60; font-weight: bold; }
+        .phone { font-size: 22px; color: #c0392b; margin: 10px; font-weight: bold;}
+    </style>
+</head>
+<body>
+    <h1>📱 عبدالرحمن محمد للكماليات 📱</h1>
+    <h3>أحسن أسعار الكماليات في 6 أكتوبر</h3>
+    <div class="phone">للتواصل واتساب: 01012345678</div>
+    <hr>
+    {% for item in products %}
+    <div class="product">
+        <img src="{{ item.img }}">
+        <div class="name">{{ item.name }}</div>
+        <div class="price">{{ item.price }}</div>
+    </div>
+    {% endfor %}
+</body>
+</html>
