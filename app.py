@@ -9,13 +9,9 @@ products = [
     {"name": "باور بانك 10000", "price": "400 جنيه", "img": "https://placehold.co/200x200/red/white?text=باور+بانك"}
 ]
 
-
-
-
 @app.route('/')
 def home():
-     render_template("index."html, products=products)
+    return render_template("index.html", products=products)
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=8000, debug=True)
-    
+    app.run()
